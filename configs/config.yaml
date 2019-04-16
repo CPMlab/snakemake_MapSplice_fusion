@@ -1,0 +1,34 @@
+options:
+    # paired for single-end reads
+    paired: True
+    no_index: False
+
+# path of the file with sample list
+samples: '/DATA/projects/j.bhin/organoid-GC/RNAseq/samples_paired.tsv'
+
+
+################################################################################
+# Path configuration                                                           
+################################################################################
+
+path:
+  data: '/DATA/projects/j.bhin/organoid-GC/RNAseq'
+  pipeline: '/home/j.bhin/pipelines/MapSplice'
+
+
+bowtie:
+  threads: 36
+  ref_fa: /DATA/projects/j.bhin/reference/GRCh38_v27_CTAT_lib_Feb092018/MapSplice_bt_index/ref_genome_MapSplice.fa
+  name: /DATA/projects/j.bhin/reference/GRCh38_v27_CTAT_lib_Feb092018/MapSplice_bt_index/bowtie_index  
+
+
+MapSplice:
+  reflib: /DATA/projects/j.bhin/reference/GRCh38_v27_CTAT_lib_Feb092018/MapSplice_fa
+  gtf: /DATA/projects/j.bhin/reference/GRCh38_v27_CTAT_lib_Feb092018/ctat_genome_lib_build_dir/ref_annot.gtf
+  threads: 18
+  options:
+    - --fusion-non-canonical
+    - --bam # bam instead of sam
+
+bam_sort_index:
+  threads: 4

@@ -1,0 +1,8 @@
+1. input fasta files should be the fasta files for each chromosome. One genome fasta cover all chromosome in a file is not supported by this tool. from a file covering all chromosome, it can be splited using pyfaidx package
+"faidx -x sequences.fa"
+
+2. input fastq file should be uncompressed (fastq.gz is not allowed)
+
+3. space in chromosome header in the reference genome fasta is not allowed
+
+

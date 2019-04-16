@@ -1,0 +1,8 @@
+name: MapSplice
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - mapsplice =2.2.1
