@@ -15,6 +15,7 @@ The following software and Python libraries are required:
 
 ## Pipeline Structure
 The pipeline consists of the following Snakemake rules:
+
 ![image](https://github.com/user-attachments/assets/a29540c0-2a76-4db9-8657-0d44283038f6)
 
 ### 1. `rule all`
